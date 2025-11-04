@@ -107,17 +107,23 @@ h1 {
     height: auto;
     display: block;
     border-radius: 4px;
+    width: 250px; /* NEW: Sets a fixed width for the personal photo */
+    margin: 0 auto; /* NEW: Centers the image if the image-content div is larger */
 }
 
 .flag-placeholder {
-    border: 1px dashed var(--text-color);
+    /* Removed dashed border as it is no longer a placeholder */
     padding: 10px;
     text-align: center;
     margin-top: 1rem;
-    font-style: italic;
-    color: var(--text-color);
 }
 
+.flag-placeholder img {
+    max-width: 100%; /* NEW: Ensures the image fits within the text column */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
 
 footer {
     background-color: var(--primary-color);
