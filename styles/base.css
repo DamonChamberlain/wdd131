@@ -1,0 +1,137 @@
+:root {
+    --primary-color: #1A4D91;
+    --secondary-color: #F5F5F5;
+    --accent-color: #FBB040;
+    --text-color: #333333;
+    --card-color: #FFFFFF;
+    
+    --heading-font: 'Roboto Slab', serif;
+    --body-font: 'Open Sans', sans-serif;
+}
+
+body {
+    font-family: var(--body-font);
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, #course-title {
+    font-family: var(--heading-font);
+    color: var(--primary-color);
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--accent-color);
+    text-decoration: underline;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+#course-title {
+    color: white;
+    display: block;
+    font-size: 1.5rem;
+    padding-bottom: 0.5rem;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding-top: 0.5rem;
+}
+
+nav a {
+    color: white;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.card {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+.card-content-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+    align-items: start;
+}
+
+@media (max-width: 768px) {
+    .card-content-grid {
+        grid-template-columns: 1fr;
+    }
+    .image-content {
+        text-align: center;
+    }
+}
+
+.image-content img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 4px;
+}
+
+.flag-placeholder {
+    border: 1px dashed var(--text-color);
+    padding: 10px;
+    text-align: center;
+    margin-top: 1rem;
+    font-style: italic;
+    color: var(--text-color);
+}
+
+
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 1.5rem 0;
+    font-size: 0.9rem;
+}
+
+footer p {
+    margin: 0.25rem 0;
+}
+
+#lastModified {
+    font-style: italic;
+    opacity: 0.8;
+}
