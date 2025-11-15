@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temple Album</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/temples.css">
+    <link rel="stylesheet" href="styles/temples-large.css" media="screen and (min-width: 800px)">
+</head>
+<body>
+    <header>
+        <h1>Temple Album</h1>
+        <button id="menu" aria-label="Toggle navigation menu"></button>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#" data-filter="old">Old</a></li>
+                <li><a href="#" data-filter="new">New</a></li>
+                <li><a href="#" data-filter="large">Large</a></li>
+                <li><a href="#" data-filter="small">Small</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Temple Picture Album</h2>
+        <div class="temple-grid">
+            <figure class="temple-card" data-temple-type="old small">
+                <img src="images/kirt.jpg" alt="Temple 1" loading="lazy" width="400" height="250">
+                <figcaption>Kirtland Temple</figcaption>
+            </figure>
+            <figure class="temple-card" data-temple-type="new large">
+                <img src="images/rome.jpg" alt="Temple 2" loading="lazy" width="400" height="250">
+                <figcaption>Rome Italy Temple</figcaption>
+            </figure>
+            <figure class="temple-card" data-temple-type="new large">
+                <img src="images/provo.jpg" alt="Temple 3" loading="lazy" width="400" height="250">
+                <figcaption>Provo City Center Temple</figcaption>
+            </figure>
+            <figure class="temple-card" data-temple-type="old large">
+                <img src="images/salt.jpg" alt="Temple 4" loading="lazy" width="400" height="250">
+                <figcaption>Salt Lake Temple</figcaption>
+            </figure>
+            <figure class="temple-card" data-temple-type="new small">
+                <img src="images/durban.jpg" alt="Temple 5" loading="lazy" width="400" height="250">
+                <figcaption>Durban South Africa Temple</figcaption>
+            </figure>
+            <figure class="temple-card" data-temple-type="old small">
+                <img src="images/card.jpg" alt="Temple 6" loading="lazy" width="400" height="250">
+                <figcaption>Cardston Alberta Temple</figcaption>
+            </figure>
+            <figure class="temple-card" data-temple-type="new large">
+                <img src="images/tokyo.jpeg" alt="Temple 7" loading="lazy" width="400" height="250">
+                <figcaption>Tokyo Japan Temple</figcaption>
+            </figure>
+            <figure class="temple-card" data-temple-type="old large">
+                <img src="images/laie.jpg" alt="Temple 8" loading="lazy" width="400" height="250">
+                <figcaption>Laie Hawaii Temple</figcaption>
+            </figure>
+            <figure class="temple-card" data-temple-type="new small">
+                <img src="images/lisbon.webp" alt="Temple 9" loading="lazy" width="400" height="250">
+                <figcaption>Lisbon Portugal Temple</figcaption>
+            </figure>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy;<span id="currentyear"></span> | Your Name | WDD 131 Project</p>
+        <p>Last Modified: <span id="lastmodified"></span></p>
+    </footer>
+
+    <script src="scripts/temples.js" defer></script>
+</body>
+</html>
