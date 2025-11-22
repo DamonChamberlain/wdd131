@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kyoto, Japan - WDD 131</title>
+    <meta name="description" content="A webpage about Kyoto, Japan, created by Damon Chamberlain for the WDD 131 W03 assignment.">
+    <meta name="author" content="Damon Chamberlain">
+    
+    <link rel="stylesheet" href="styles/place.css">
+    <script src="scripts/place.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Kyoto, Japan</h1>
+    </header>
+
+    <main>
+        <picture>
+            <source media="(min-width: 650px)" srcset="images/ky.webp">
+            <img src="images/ky.webp" alt="A scenic photograph of Kyoto, Japan" width="600" height="400">
+        </picture>
+
+        <section class="data-card">
+            <h2>Data</h2>
+            <dl>
+                <dt>Area:</dt>
+                <dd>827.83 km²</dd>
+                <dt>Population:</dt>
+                <dd>1.465 million</dd>
+                <dt>Capital:</dt>
+                <dd>N/A (Kyoto is a city)</dd>
+                <dt>Languages:</dt>
+                <dd>Japanese</dd>
+                <dt>Currency:</dt>
+                <dd>Japanese Yen (JPY)</dd>
+                <dt>Time Zone:</dt>
+                <dd>UTC+9</dd>
+            </dl>
+        </section>
+
+        <section class="weather-card">
+            <h2 class="weather-title">Weather</h2>
+            
+            <img class="weather-icon" src="images/wicon.svg" alt="Sunny weather icon">
+            
+            <dl>
+                <dt>Temperature:</dt>
+                <dd>10°C</dd>
+                <dt>Conditions:</dt>
+                <dd>Partly Cloudy</dd>
+                <dt>Wind:</dt>
+                <dd>5 km/h</dd>
+                <dt>Wind Chill:</dt>
+                <dd><span id="wind-chill"></span></dd>
+            </dl>
+        </section>
+    </main>
+
+    <footer>
+        <p>
+            &copy;<span id="current-year"></span> Damon Chamberlain - Connell, Washington
+        </p>
+        <p>
+            Last Modification: <span id="last-modified"></span>
+        </p>
+    </footer>
+</body>
+</html>
