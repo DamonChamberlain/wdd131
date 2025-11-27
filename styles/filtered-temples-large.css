@@ -1,0 +1,41 @@
+@media (min-width: 800px) {
+
+    main {
+        max-width: 1000px; 
+    }
+
+    header {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 1.5rem;
+        padding: 1rem 2rem;
+    }
+
+    #menu {
+        display: none;
+    }
+
+    nav {
+        position: static; 
+        width: auto;
+        background: none;
+    }
+
+    .nav-links {
+        display: flex !important;
+        flex-direction: row;
+        width: auto;
+        gap: 1rem;
+    }
+
+    .nav-links li a {
+        border-top: none;
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+
+    .temple-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    }
+}
