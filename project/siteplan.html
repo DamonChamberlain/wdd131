@@ -3,7 +3,13 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>w05 project: website plan</title>
+    <meta name="description" content="planning document for the coder's compass web development resource project.">
+    <meta name="author" content="damon chamberlain">
+    
+    <title>w05 project: website plan and product review</title> <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=courier+prime:wght@400&family=lato:wght@400;700&family=roboto+slab:wght@700&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
@@ -55,22 +61,22 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr class="primary-color">
+                    <tr class="primary-color-row">
                         <td>**main accent**</td>
                         <td>`#007bff`</td>
                         <td>**buttons, big titles (h1/h2), links, main highlights.** (like the border on this document.)</td>
                     </tr>
-                    <tr class="secondary-color">
+                    <tr class="secondary-color-row">
                         <td>**secondary accent**</td>
                         <td>`#28a745`</td>
                         <td>**hover effects, smaller titles (h3/h4), positive feedback.** (like section titles here.)</td>
                     </tr>
-                    <tr class="background-color">
+                    <tr class="background-color-row">
                         <td>**main background**</td>
                         <td>`#f8f9fa`</td>
                         <td>**page background.**</td>
                     </tr>
-                    <tr class="text-color">
+                    <tr class="text-color-row">
                         <td>**body text**</td>
                         <td>`#343a40`</td>
                         <td>**paragraphs, most text.**</td>
@@ -78,10 +84,10 @@
                 </tbody>
             </table>
             <div class="color-swatches">
-                <div style="background-color: #007bff;">#007bff</div>
-                <div style="background-color: #28a745;">#28a745</div>
-                <div style="background-color: #f8f9fa; color: #343a40; border: 1px solid #343a40;">#f8f9fa</div>
-                <div style="background-color: #343a40; color: #f8f9fa;">#343a40</div>
+                <div class="swatch swatch-primary">#007bff</div>
+                <div class="swatch swatch-secondary">#28a745</div>
+                <div class="swatch swatch-background">#f8f9fa</div>
+                <div class="swatch swatch-text">#343a40</div>
             </div>
         </section>
 
@@ -114,9 +120,9 @@
                     </tr>
                 </tbody>
             </table>
-            <p style="font-family: 'roboto slab', serif; font-size: 1.5em; color: #007bff;">example header text: the coder's compass</p>
-            <p style="font-family: 'lato', sans-serif; font-size: 1.1em; color: #343a40;">example body text: the site provides tutorials and cheat sheets...</p>
-            <code style="font-family: 'courier prime', monospace; color: #28a745; background-color: #eee;">const simplecode = true;</code>
+            <p class="font-example header-font">example header text: the coder's compass</p>
+            <p class="font-example body-font">example body text: the site provides tutorials and cheat sheets...</p>
+            <code class="font-example code-font">const simplecode = true;</code>
         </section>
 
         <section id="wireframe">
@@ -128,4 +134,38 @@
             <p>everything stacked in one column for small screens.</p>
             
 
-            <div class="wireframe-container
+            <div class="wireframe-container mobile">
+                <div class="element header">header (logo + hidden nav)</div>
+                <div class="element hero">big intro spot (title, tagline, button)</div>
+                <div class="element featured">resource card 1</div>
+                <div class="element featured">resource card 2</div>
+                <div class="element featured">resource card 3</div>
+                <div class="element footer">footer (nav, social, copyright)</div>
+            </div>
+
+            <h3>desktop view</h3>
+            <p>using columns and grid for large screens.</p>
+            
+
+            <div class="wireframe-container desktop">
+                <div class="element header">header (logo | full nav bar)</div>
+                <div class="element hero-desktop">big intro spot</div>
+                <div class="element grid-area-1">featured 1</div>
+                <div class="element grid-area-2">featured 2</div>
+                <div class="element grid-area-3">featured 3</div>
+                <div class="element footer">footer (info grid)</div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> wdd 131 project plan</p>
+    </footer>
+
+    <script>
+        // get the current year for the footer
+        document.getElementById('currentyear').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

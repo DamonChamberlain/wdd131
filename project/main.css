@@ -1,8 +1,5 @@
 /* --- w05 site plan css: the coder's compass theme --- */
 
-/* font imports */
-@import url('https://fonts.googleapis.com/css2?family=roboto+slab:wght@700&family=lato:wght@400;700&family=courier+prime:wght@400&display=swap');
-
 /* color variables */
 :root {
     --primary-color: #007bff;   /* main accent */
@@ -10,6 +7,7 @@
     --background-color: #f8f9fa; /* page background */
     --text-color: #343a40;       /* body text */
     --code-bg: #eee;             /* light background for code */
+    --white: #fff;               /* white for contrast */
 }
 
 /* base styles & colors */
@@ -25,7 +23,7 @@ body {
 header, main {
     max-width: 1000px;
     margin: 0 auto;
-    background-color: white;
+    background-color: var(--white);
     padding: 30px;
     border: 1px solid var(--primary-color); /* use main color for document border */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -48,7 +46,7 @@ header {
     width: 50px;
     height: 50px;
     background-color: var(--secondary-color);
-    color: white;
+    color: var(--white);
     display: grid;
     place-items: center;
     font-family: 'roboto slab', serif;
@@ -111,33 +109,61 @@ th, td {
 th {
     background-color: var(--code-bg);
 }
-.primary-color td:nth-child(1), .secondary-color td:nth-child(1) {
+
+/* styles for color rows (optional visualization for the plan) */
+.primary-color-row td:nth-child(1), .secondary-color-row td:nth-child(1) {
     font-weight: bold;
 }
+
+/* swatch section - replaces inline styles */
 .color-swatches {
     display: flex;
     gap: 10px;
     margin-top: 10px;
 }
-.color-swatches div {
+.swatch {
     width: 100px;
     height: 40px;
     display: grid;
     place-items: center;
     font-size: 0.8em;
     border: 1px solid #999;
+    color: var(--white); /* default to white text for dark backgrounds */
 }
 
-/* code font */
-code {
+.swatch-primary { background-color: var(--primary-color); }
+.swatch-secondary { background-color: var(--secondary-color); }
+.swatch-background { 
+    background-color: var(--background-color); 
+    color: var(--text-color); /* change text color for light background */
+    border: 1px solid var(--text-color);
+}
+.swatch-text { background-color: var(--text-color); }
+
+/* font examples - replaces inline styles */
+.font-example {
+    font-size: 1.1em;
+    margin-top: 5px;
+}
+.header-font { 
+    font-family: 'roboto slab', serif; 
+    font-size: 1.5em; 
+    color: var(--primary-color);
+}
+.body-font { 
+    font-family: 'lato', sans-serif; 
+    color: var(--text-color);
+}
+.code-font {
     font-family: 'courier prime', monospace;
+    color: var(--secondary-color);
     background-color: var(--code-bg);
     padding: 2px 4px;
     border-radius: 3px;
-    color: var(--text-color);
+    display: inline-block; /* allows code to take its styled background */
 }
 
-/* wireframe blocks (just boxes for the plan) */
+/* wireframe blocks */
 .wireframe-container {
     margin-top: 15px;
     border: 2px dashed #999;
