@@ -1,0 +1,185 @@
+/* Import the base styles or ensure they are linked before this file in form.html */
+/* @import url('base.css'); */
+
+/* --- Form Specific Layout and Styling --- */
+
+main form {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: var(--card-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+fieldset {
+    border: 1px solid var(--secondary-color);
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    border-radius: 6px;
+    background-color: #fcfcfc; /* Slightly off-white background */
+}
+
+legend {
+    font-family: var(--heading-font);
+    font-size: 1.25rem;
+    color: var(--primary-color);
+    padding: 0 0.5rem;
+    font-weight: 700;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.25rem;
+}
+
+label {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+}
+
+/* Style for all input fields, select, and textarea */
+input[type="text"],
+input[type="date"],
+select,
+textarea {
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    width: 100%;
+    box-sizing: border-box; /* Includes padding and border in the element's total width */
+    font-family: var(--body-font);
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus,
+select:focus,
+textarea:focus {
+    border-color: var(--accent-color);
+    outline: none;
+    box-shadow: 0 0 5px rgba(251, 176, 64, 0.5); /* Accent color glow */
+}
+
+textarea {
+    resize: vertical;
+}
+
+/* --- Rating (Star) Group Styling --- */
+
+.rating-group .stars {
+    display: flex;
+    flex-direction: row-reverse; /* Puts 5 on the left for standard star rating selection */
+    justify-content: flex-end; /* Aligns stars to the left */
+    font-size: 2em;
+}
+
+.stars input[type="radio"] {
+    display: none;
+}
+
+.stars label {
+    font-size: 1.5em; /* Increase size for visibility */
+    color: #ccc; /* Unselected star color */
+    cursor: pointer;
+    transition: color 0.2s;
+    margin: 0 2px;
+}
+
+.stars label:before {
+    content: "★"; /* Unicode for a filled star */
+}
+
+/* Hover and Checked State Logic */
+.stars input[type="radio"]:checked ~ label,
+.stars label:hover,
+.stars label:hover ~ label {
+    color: var(--accent-color); /* Highlight color on selection/hover */
+}
+
+/* --- Checkbox Group Styling --- */
+
+.checkbox-group {
+    border-top: 1px solid #eee;
+    padding-top: 1rem;
+}
+
+.checkbox-group label {
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+}
+
+.checkbox-group div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.checkbox-group input[type="checkbox"] {
+    margin-right: 10px;
+    width: auto; /* Override 100% width from general input styling */
+}
+
+.checkbox-group div label {
+    font-weight: normal; /* For individual checkbox labels */
+    margin-bottom: 0;
+}
+
+/* --- Submit Button Styling --- */
+
+input[type="submit"] {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+input[type="submit"]:hover {
+    background-color: #153c73; /* Darker shade of primary color */
+}
+
+/* --- Confirmation Page Styling --- */
+
+.confirmation-content {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.confirmation-content h2 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.review-counter {
+    margin: 20px auto;
+    padding: 15px;
+    border: 2px dashed var(--accent-color);
+    background-color: #fff8f0; /* Light accent background */
+    border-radius: 8px;
+    max-width: 400px;
+}
+
+/* --- Mobile Responsiveness --- */
+
+@media (max-width: 600px) {
+    main form {
+        margin: 1rem 0.5rem;
+        padding: 1rem;
+    }
+
+    legend {
+        font-size: 1.1rem;
+    }
+
+    .stars label {
+        font-size: 1.2em; 
+    }
+}
