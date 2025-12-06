@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Review Form</title>
+    <link rel="stylesheet" href="styles/base.css"> 
+    <link rel="stylesheet" href="styles/form.css">
+</head>
+<body>
+    <header>
+        <h1>Product Review</h1>
+    </header>
+
+    <main>
+        <form method="get" action="review.html">
+            <fieldset>
+                <legend>Product Information</legend>
+                
+                <div class="form-group">
+                    <label for="product-name">Product Name *</label>
+                    <select id="product-name" name="product-name" required>
+                        <option value="" disabled selected>Select a Product ...</option>
+                    </select>
+                </div>
+
+                <div class="form-group rating-group">
+                    <label for="rating-5">Overall Rating *</label>
+                    <div class="stars">
+                        <input type="radio" id="rating-5" name="overall-rating" value="5" required>
+                        <label for="rating-5" title="5 Stars">&starf;</label>
+                        
+                        <input type="radio" id="rating-4" name="overall-rating" value="4">
+                        <label for="rating-4" title="4 Stars">&starf;</label>
+                        
+                        <input type="radio" id="rating-3" name="overall-rating" value="3">
+                        <label for="rating-3" title="3 Stars">&starf;</label>
+                        
+                        <input type="radio" id="rating-2" name="overall-rating" value="2">
+                        <label for="rating-2" title="2 Stars">&starf;</label>
+                        
+                        <input type="radio" id="rating-1" name="overall-rating" value="1">
+                        <label for="rating-1" title="1 Star">&starf;</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="install-date">Date of Installation *</label>
+                    <input type="date" id="install-date" name="install-date" required>
+                </div>
+
+            </fieldset>
+            
+            <fieldset>
+                <legend>Features and Review</legend>
+
+                <div class="form-group checkbox-group">
+                    <label>Useful Features (Check all that apply)</label>
+                    <div>
+                        <input type="checkbox" id="feature-durability" name="useful-feature" value="durability">
+                        <label for="feature-durability">Durability</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="feature-ease-of-use" name="useful-feature" value="ease-of-use">
+                        <label for="feature-ease-of-use">Ease of Use</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="feature-performance" name="useful-feature" value="performance">
+                        <label for="feature-performance">Performance</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="feature-design" name="useful-feature" value="design">
+                        <label for="feature-design">Design</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="written-review">Written Review</label>
+                    <textarea id="written-review" name="written-review" rows="5"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="user-name">Your Name (Optional)</label>
+                    <input type="text" id="user-name" name="user-name">
+                </div>
+
+            </fieldset>
+
+            <input type="submit" value="Submit Review">
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> Product Reviews | WDD 131</p>
+    </footer>
+
+    <script src="scripts/form.js"></script>
+</body>
+</html>
