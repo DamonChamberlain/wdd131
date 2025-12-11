@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="the coder's compass is a free resource hub for learning html, css, and javascript fundamentals.">
+    <meta name="author" content="damon chamberlain">
+    
+    <title>home | the coder's compass - web dev guide</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=courier+prime:wght@400&family=lato:wght@400;700&family=roboto+slab:wght@700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
+    <script src="site.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo-link">coder's compass</a>
+            <div class="nav-links">
+                <a href="index.html">home</a>
+                <a href="about.html">about us</a>
+                <a href="contact.html">contact & form</a>
+            </div>
+        </nav>
+    </header>
+    
+    <main class="content-wrapper">
+        <div class="hero">
+            <h1 id="welcome-message">hello! welcome to the coder's compass.</h1>
+            <p>Web development can be really confusing at first, so this site is your compass. We offer super clear, simple guides and cheat sheets to help you master the core three: HTML, CSS, and JavaScript. We're here to make learning easier.</p>
+            <a href="about.html" class="cta-button">start your journey</a>
+        </div>
+
+        <section class="featured-content">
+            <h2>featured guides</h2>
+            <p>Check out the best resources we've put together. These guides are perfect whether you're just starting out and need the very basics, or if you know a little and need to jump to the next intermediate level. Find the topic you need and start coding!</p>
+            
+            <div id="resources-grid" class="resources-grid">
+            </div>
+        </section>
+
+        <section class="image-showcase">
+            <h2>learn by doing</h2>
+            <img 
+                src="images/desk.jpg" 
+                alt="Ultrawide monitor coding setup with mechanical keyboard and purple ambient lighting" 
+                loading="lazy"
+                width="800"
+                height="450"
+            >
+            <p>We don't just give you theories. Every tutorial has real code examples and practice problems you can try out right away. The only way to truly learn web development is by getting your hands dirty and actually writing code yourself. Let's build something!</p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>built for wdd 131 &copy; <span id="currentyear"></span> | <a href="references.html">references</a></p>
+    </footer>
+</body>
+</html>

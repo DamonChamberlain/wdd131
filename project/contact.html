@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="contact the coder's compass team with questions or feedback using our form.">
+    <meta name="author" content="damon chamberlain">
+    
+    <title>contact us | the coder's compass</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=courier+prime:wght@400&family=lato:wght@400;700&family=roboto+slab:wght@700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
+    <script src="site.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo-link">coder's compass</a>
+            <div class="nav-links">
+                <a href="index.html">home</a>
+                <a href="about.html">about us</a>
+                <a href="contact.html">contact & form</a>
+            </div>
+        </nav>
+    </header>
+    
+    <main class="content-wrapper">
+        <section>
+            <h2>get in touch</h2>
+            <p>have a question about a tutorial, or just want to say hi? use the form below! we will process your submission using javascript.</p>
+        </section>
+
+        <div class="contact-form-container">
+            <form id="contact-form">
+                <label for="name">your name:</label>
+                <input type="text" id="name" name="name" required minlength="2">
+
+                <label for="email">your email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="topic">topic of inquiry:</label>
+                <select id="topic" name="topic" required>
+                    <option value="none" selected disabled>select a topic</option>
+                    <option value="html">html help</option>
+                    <option value="css">css layout/styling</option>
+                    <option value="javascript">javascript dynamic content</option>
+                    <option value="feedback">site feedback</option>
+                </select>
+
+                <label for="message">your message:</label>
+                <textarea id="message" name="message" rows="6" required minlength="10"></textarea>
+
+                <button type="submit">submit inquiry (js validation)</button>
+            </form>
+        </div>
+        
+        <section>
+            <h2>form feedback (js output)</h2>
+            <p>the results of your form submission, including js conditional branching, will be displayed below:</p>
+            <pre id="message-output">your submission status will appear here after clicking 'submit'.</pre>
+        </section>
+    </main>
+
+    <footer>
+        <p>built for wdd 131 &copy; <span id="currentyear"></span> | <a href="references.html">references</a></p>
+    </footer>
+</body>
+</html>
